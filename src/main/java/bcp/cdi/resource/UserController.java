@@ -3,18 +3,13 @@ package bcp.cdi.resource;
 import static bcp.cdi.util.LogUtil.CONSTRUCTOR_MSG;
 import static bcp.cdi.util.LogUtil.identity;
 import static bcp.cdi.util.LogUtil.logConstructorEvent;
-import static bcp.cdi.util.LogUtil.logDestroyEvent;
 
 import java.time.LocalDateTime;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 
 import bcp.cdi.conf.RequestProduced;
 import lombok.NoArgsConstructor;
@@ -65,7 +60,6 @@ public class UserController {
 	 */
 	@Path("/request")
 	@GET
-	@Inject
 	public String callRequestScopedService() {
 		usRequest.doSomething();
 		return "DONE " + LocalDateTime.now();

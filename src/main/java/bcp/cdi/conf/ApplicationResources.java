@@ -12,10 +12,11 @@ import bcp.cdi.resource.UserService;
 import bcp.cdi.util.LogUtil;
 import lombok.extern.slf4j.Slf4j;
 
-@ApplicationScoped
 @Slf4j
+@ApplicationScoped
 public class ApplicationResources {
 
+  
 	@Produces
 	@RequestProduced
 	public UserService createUserService(Instance<UserService> instance) {

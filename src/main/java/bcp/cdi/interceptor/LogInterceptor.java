@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
  * Interceptor which logs the parameters and the result. Interceptors have 
  * Dependent scope 
  */
+
 @Logged
 @Interceptor
 @Priority(Interceptor.Priority.APPLICATION)
@@ -30,11 +31,14 @@ public class LogInterceptor {
 	public Object logMethod(InvocationContext ctx) throws Exception {
 		log.debug("Intercepted START obj:{} method:{} with parameters: {}", identity(ctx.getTarget()), ctx.getMethod(),
 		        Arrays.toString(ctx.getParameters()));
+		// can alter parameters ctx.setParameters(params);
 		Object result = ctx.proceed();
 		log.debug("Intercepted END result: {}", result);
 		return result;
 	}
 
+	//...
+	
 	@PreDestroy
 	public void destroy() {
 		logDestroyEvent(log, this);

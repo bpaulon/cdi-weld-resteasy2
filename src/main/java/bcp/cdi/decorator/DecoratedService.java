@@ -17,6 +17,8 @@ public abstract class DecoratedService implements ServiceInterface {
     this.service = service;
   }
   
+  //...
+  
   @Override
   public void doSomething() {
     log.debug("doSomething in DecoratedService");

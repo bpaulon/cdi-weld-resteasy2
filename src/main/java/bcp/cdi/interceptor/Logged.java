@@ -12,3 +12,4 @@ import javax.interceptor.InterceptorBinding;
 @Target({ ElementType.METHOD, ElementType.TYPE })
 public @interface Logged {
 }
+

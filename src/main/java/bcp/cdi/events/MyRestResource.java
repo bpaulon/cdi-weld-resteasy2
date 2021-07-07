@@ -8,7 +8,7 @@ import javax.ws.rs.Path;
 
 @Path("event")
 @ApplicationScoped
-public class EventController {
+public class MyRestResource {
 
   @Inject
   Event<SimpleEvent> event;

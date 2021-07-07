@@ -8,7 +8,7 @@ import javax.ws.rs.Path;
 //@ApplicationScoped // one interceptor for this controller (interceptors are depedent)
 @RequestScoped // for each request it creates a new Log interceptor
 @Logged
-public class LoggedController {
+public class MyRestController {
   
   @GET
   public String callLoggedMethod() {

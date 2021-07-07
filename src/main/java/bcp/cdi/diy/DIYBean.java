@@ -1,5 +1,8 @@
 package bcp.cdi.diy;
 
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
 class DIYBean {
 
   private MyService myService;
@@ -16,4 +19,13 @@ class DIYBean {
     myService.doStuff();
   }
 
+  @Test
+  public void test() {
+    MyService myService = Mockito.mock(MyService.class);
+    DIYBean bean = new DIYBean(myService);
+    bean.doStuff();
+    
+    //... assert things
+  }
+  
 }
