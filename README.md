@@ -11,7 +11,7 @@ Define packaging structure for the web application in the Deployment Assembly:
 - src/main/webapp -> /
 - Maven Dependencies -> WEB-INF/lib
 
-### Debug WELD 
+### Debug WELD
 Set system prorperty
 ```-Dorg.jboss.logging.provider=slf4j``` 
 in Servers->Tomcat ->General Information->Open Launch Configuration ->Arguments -> VM Arguments
